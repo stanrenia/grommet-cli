@@ -2,7 +2,7 @@
 * Node dependencies
 **/
 import path from 'path';
-import { spawn } from 'child_process';
+import opn from 'opn';
 
 /**
 * NPM dependencies
@@ -117,7 +117,7 @@ function build(config) {
                 `${delimiter}: Opening the browser at http://localhost:${PORT}`
               );
 
-              spawn('open', [`http://localhost:${PORT}`]);
+              opn(`http://localhost:${PORT}`);
             }
 
             firstCompilation = false;
